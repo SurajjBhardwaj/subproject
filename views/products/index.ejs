@@ -1,0 +1,23 @@
+<style>
+     
+     .photo{
+        height: 200px;
+        width: 300px;
+     }
+
+
+
+</style>
+
+<h1>Products</h1>
+<ul>
+<% for (let i = 0; i < products.length; i++) { %>
+  <li>
+    <img class="photo" src="/images/<%= products[i].image %>  " alt="<%= products[i].name %>">
+    <h2><%= products[i].name %></h2>
+    <p><%= products[i].description %></p>
+    <p><%= products[i].price %></p>
+  </li>
+<% } %>
+</ul>
+<a href="/new">Add a new product</a>
